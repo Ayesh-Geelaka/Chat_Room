@@ -3,15 +3,15 @@
 	const app = document.querySelector(".app");
 	const socket = io();
 
-	let uname;
+	let client;
 
 	app.querySelector(".join-screen #join-user").addEventListener("click",function(){
-		let username = app.querySelector(".join-screen #username").value;
-		if(username.length == 0){
+		let clientname = app.querySelector(".join-screen #username").value;
+		if(clientname.length == 0){
 			return;
 		}
-		socket.emit("newuser",username);
-		uname = username;
+		socket.emit("newuser",clientname);
+		client = clientname;
 		app.querySelector(".join-screen").classList.remove("active");
 		app.querySelector(".chat-screen").classList.add("active");
 	});
@@ -22,18 +22,18 @@
 			return;
 		}
 		renderMessage("my",{
-			username:uname,
+			username:client,
 			text:message
 		});
 		socket.emit("chat",{
-			username:uname,
+			username:client,
 			text:message
 		});
 		app.querySelector(".chat-screen #message-input").value = "";
 	});
 
 	app.querySelector(".chat-screen #exit-chat").addEventListener("click",function(){
-		socket.emit("exituser",uname);
+		socket.emit("exituser",client);
 		window.location.href = window.location.href;
 	});
 
