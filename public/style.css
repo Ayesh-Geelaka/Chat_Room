@@ -9,7 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+	background-image: url(balla.jpeg);
 }
 .app {
 	position: fixed;
@@ -17,7 +17,7 @@ body {
 	height: 100%;
 	max-width: 450px;
 	max-height: 550px;
-	background: #fff;
+	background: #FFFFFF;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
 }
