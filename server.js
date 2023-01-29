@@ -12,10 +12,10 @@ app.use(express.static(path.join(__dirname+"/public")));
 
 io.on("connection", function(socket){   
 	socket.on("newuser",function(clientname){
-		socket.broadcast.emit("update", clientname + " joined the conversation");
+		socket.broadcast.emit("update", clientname + " joined the chat");
 	});
 	socket.on("exituser",function(clientname){
-		socket.broadcast.emit("update", clientname + " left the conversation");
+		socket.broadcast.emit("update", clientname + " left the chat");
 	});
 	socket.on("chat",function(message){
 		socket.broadcast.emit("chat", message);
