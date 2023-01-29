@@ -9,6 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
 .app {
 	position: fixed;
@@ -48,7 +49,9 @@ body {
 	border-bottom: 4px solid #555;
 	padding: 5px 0px;
 	display: inline-block;
+	
 }
+
 .screen .form-input label {
 	display: block;
 	margin-bottom: 5px;
@@ -67,6 +70,7 @@ body {
 	cursor: pointer;
 	outline: none;
 	border: none;
+  	
 }
 
 .chat-screen .header {
