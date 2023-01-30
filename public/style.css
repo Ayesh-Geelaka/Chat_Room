@@ -9,7 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(balla.jpeg);
+	background-image: url(balla.jpg);
 }
 .app {
 	position: fixed;
@@ -133,7 +133,7 @@ body {
 }
 .chat-screen .messages .message .name {
 	font-size: 13px;
-	color: #555;
+	color: rgb(165, 11, 11);
 	margin-bottom: 5px;
 }
 .chat-screen .messages .message .text {
@@ -143,6 +143,7 @@ body {
 	text-align: center;
 	padding: 10px;
 	font-style: italic;
+	font-size: smaller;
 }
 .chat-screen .typebox {
 	width: 100%;
