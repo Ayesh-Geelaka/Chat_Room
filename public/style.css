@@ -98,21 +98,29 @@ body {
 	outline: none;
 	
 }
+
+/*Chat interface*/
 .chat-screen .messages {
 	width: 100%;
 	height: calc(100% - 100px);
 	background: #f5f5f5;
 	overflow: auto;
 }
+
+/* message box position*/
 .chat-screen .messages .message {
 	display: flex;
 	padding: 10px;
 }
+
+/* message box*/
 .chat-screen .messages .message > div {
 	max-width: 80%;
-	background: #fff;
+	background: #ffffff;
 	box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
 	padding: 10px;
+	
+
 }
 .chat-screen .messages .message.my-message {
 	justify-content: flex-end;
