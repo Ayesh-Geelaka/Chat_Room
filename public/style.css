@@ -11,7 +11,7 @@ body {
 	align-items: center;
 	background-image: url(nature.jpg);
 	background-repeat: no-repeat;
-  	
+
   	background-position: center;
 }
 .app {
@@ -106,7 +106,7 @@ body {
 .chat-screen .messages {
 	width: 100%;
 	height: calc(100% - 100px);
-	background-image: url(new.jpg);
+	background-image: url(chat.jpg);
 	overflow: auto;
 	
 	
