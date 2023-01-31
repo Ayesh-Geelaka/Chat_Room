@@ -6,9 +6,28 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server);
 
+var User = require("./models/user")
+var path = require("path")
+var mongoose = require("mongoose")
+var params = require("./params/params");
+var bodyParser = require("body-parser");
+var passport = require("passport");
+var session = require("express-session");
+var cookieParser = require("cookie-parser");
+var setUpPassport = require("./setuppassport");
+var flash = require("connect-flash");
+
 server.listen(5000);
 
 app.use(express.static(path.join(__dirname+"/public")));
+
+mongoose.set('strictQuery', false)
+
+var db = mongoose.connect(params.DATABASECONNECTION, function (error, response) {
+    if (error) { console.log(error); }
+    else { console.log('connected' + db) }
+});
+setUpPassport();
 
 io.on("connection", function(socket){   
 	socket.on("newuser",function(clientname){
