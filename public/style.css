@@ -9,8 +9,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(balla.jpg);
-	background-color: aqua;
+	background-image: url(nature.jpg);
+	background-repeat: no-repeat;
+  	
+  	background-position: center;
 }
 .app {
 	position: fixed;
